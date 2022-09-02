@@ -1,0 +1,444 @@
+
+    <style>
+    table.eli5-weights tr:hover {
+        filter: brightness(85%);
+    }
+</style>
+
+
+
+    
+        <p>Explained as: decision path</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+        
+        <pre>
+Features with largest coefficients.
+
+Feature weights are calculated by following decision paths in trees
+of an ensemble (or a single tree for DecisionTreeClassifier).
+Each node of the tree has an output score, and contribution of a feature
+on the decision path is how much the score changes from parent to child.
+Weights of all features sum to the output score or proba of the estimator.
+
+Caveats:
+1. Feature weights just show if the feature contributed positively or
+   negatively to the final score, and does not show how increasing or
+   decreasing the feature value will change the prediction.
+2. In some cases, feature weight can be close to zero for an important feature.
+   For example, in a single tree that computes XOR function, the feature at the
+   top of the tree will have zero weight because expected scores for both
+   branches are equal, so decision at the top feature does not change the
+   expected score. For an ensemble predicting XOR functions it might not be
+   a problem, but it is not reliable if most trees happen to choose the same
+   feature at the top.
+</pre>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+        
+
+    
+
+        
+            
+                
+                
+    
+        <p style="margin-bottom: 0.5em; margin-top: 0em">
+            <b>
+    
+        y
+    
+</b>
+
+    
+    (score <b>4325.000</b>)
+
+top features
+        </p>
+    
+    <table class="eli5-weights"
+           style="border-collapse: collapse; border: none; margin-top: 0em; table-layout: auto; margin-bottom: 2em;">
+        <thead>
+        <tr style="border: none;">
+            
+                <th style="padding: 0 1em 0 0.5em; text-align: right; border: none;" title="Feature contribution already accounts for the feature value (for linear models, contribution = weight * feature value), and the sum of feature contributions is equal to the score or, for some classifiers, to the probability. Feature values are shown if &quot;show_feature_values&quot; is True.">
+                    Contribution<sup>?</sup>
+                </th>
+            
+            <th style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">Feature</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        
+            <tr style="background-color: hsl(120, 100.00%, 80.00%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2110.346
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        &lt;BIAS&gt;
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 82.83%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1696.720
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lavabo
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 88.66%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +938.503
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        suite
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 90.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +686.100
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        rua
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 94.19%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +360.920
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        parquet
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 95.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +218.433
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        67
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 97.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +85.490
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        assis
+    </td>
+    
+</tr>
+        
+        
+
+        
+        
+            <tr style="background-color: hsl(0, 100.00%, 98.15%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -70.562
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        suites
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 96.66%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -163.381
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        empregada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 95.28%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -268.230
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        apartamento
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 95.28%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -268.437
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        televisao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 93.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -388.500
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        leste
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 91.59%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -612.402
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        norte
+    </td>
+    
+</tr>
+        
+
+        </tbody>
+    </table>
+
+            
+        
+
+        
+    
+        
+        
+    
+        <p style="margin-bottom: 0.5em; margin-top: 0em">
+            <b>
+    
+        y
+    
+</b>
+
+    
+    (score <b>4325.000</b>)
+
+top features
+        </p>
+    
+    <table class="eli5-weights"
+           style="border-collapse: collapse; border: none; margin-top: 0em; table-layout: auto; margin-bottom: 2em;">
+        <thead>
+        <tr style="border: none;">
+            
+                <th style="padding: 0 1em 0 0.5em; text-align: right; border: none;" title="Feature contribution already accounts for the feature value (for linear models, contribution = weight * feature value), and the sum of feature contributions is equal to the score or, for some classifiers, to the probability. Feature values are shown if &quot;show_feature_values&quot; is True.">
+                    Contribution<sup>?</sup>
+                </th>
+            
+            <th style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">Feature</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        
+            <tr style="background-color: hsl(120, 100.00%, 80.00%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2110.346
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        &lt;BIAS&gt;
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 83.28%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1634.321
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        Highlighted in text (sum)
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 90.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +686.100
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        rua
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 94.19%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +360.920
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        parquet
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 95.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +218.433
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        67
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 97.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +85.490
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        assis
+    </td>
+    
+</tr>
+        
+        
+
+        
+        
+            <tr style="background-color: hsl(0, 100.00%, 98.15%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -70.562
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        suites
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 96.66%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -163.381
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        empregada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 95.28%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -268.230
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        apartamento
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 95.28%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -268.437
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        televisao
+    </td>
+    
+</tr>
+        
+
+        </tbody>
+    </table>
+
+    
+
+
+
+    <p style="margin-bottom: 2.5em; margin-top:-0.5em;">
+        <span style="opacity: 0.80"> 01  dormitorio sendo </span><span style="background-color: hsl(120, 100.00%, 73.57%); opacity: 0.91" title="938.503">suite</span><span style="opacity: 0.80"> com armarios , living  02  ambientes com </span><span style="background-color: hsl(120, 100.00%, 60.00%); opacity: 1.00" title="1696.720">lavabo</span><span style="opacity: 0.80"> , armario , cozinha americana com pia , armarios e churrasqueira , area de servico com tanque , piso porcelanato , vaga para  2  carros individual ,  16 deg andar , frente , posicao solar </span><span style="background-color: hsl(0, 100.00%, 85.75%); opacity: 0.85" title="-388.500">leste</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(0, 100.00%, 80.40%); opacity: 0.87" title="-612.402">norte</span><span style="opacity: 0.80"> , proximo ao shopping iguatemi com vista para o parque germania ,  61  m 2  de area privativa . condominio com portaria , elevador , lavanderia , sala fitness e salao de festas . a auxiliadora predial conta com essa e mais de  5000  ofertas de imoveis para locacao em porto alegre e regiao . conte conosco para tornar realidade o sonho da sua nova casa !</span>
+    </p>
+
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+

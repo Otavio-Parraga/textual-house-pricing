@@ -1,0 +1,23 @@
+Textual Preprocess Pipeline:
+ColumnTransformer(remainder='passthrough',
+                  transformers=[('bow',
+                                 Pipeline(steps=[('countvectorizer',
+                                                  CountVectorizer(binary=True,
+                                                                  dtype=<class 'numpy.float32'>,
+                                                                  min_df=0.001)),
+                                                 ('tfidftransformer',
+                                                  TfidfTransformer()),
+                                                 ('truncatedsvd',
+                                                  TruncatedSVD(n_components=30,
+                                                               random_state=42))]),
+                                 'description_no_stp')])
+Evaluating regressor Extremely Randomized Trees...
+MSE: 49089400426.058 | MAE: 87574.070 | RMSE: 221561.279 | MAPE: 0.193 | MdAPE: 0.138 | R2: 0.867
+Evaluating regressor Gradient Boosting...
+MSE: 65548107405.209 | MAE: 102092.016 | RMSE: 256023.646 | MAPE: 0.227 | MdAPE: 0.169 | R2: 0.821
+Evaluating regressor Random Forest...
+MSE: 58155482128.603 | MAE: 91274.634 | RMSE: 241154.478 | MAPE: 0.199 | MdAPE: 0.143 | R2: 0.845
+Evaluating regressor XGBoost...
+MSE: 59732464557.348 | MAE: 94008.756 | RMSE: 244402.260 | MAPE: 0.206 | MdAPE: 0.153 | R2: 0.837
+Evaluating regressor LightGBM...
+MSE: 57464611944.238 | MAE: 92714.057 | RMSE: 239717.776 | MAPE: 0.203 | MdAPE: 0.152 | R2: 0.845

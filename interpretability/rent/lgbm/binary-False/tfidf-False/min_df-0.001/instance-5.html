@@ -1,0 +1,3614 @@
+
+    <style>
+    table.eli5-weights tr:hover {
+        filter: brightness(85%);
+    }
+</style>
+
+
+
+    
+        <p>Explained as: decision paths</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+        
+        <pre>
+Features with largest coefficients.
+
+Feature weights are calculated by following decision paths in trees
+of an ensemble. Each leaf has an output score, and expected scores can also be
+assigned to parent nodes. Contribution of one feature on the decision path
+is how much expected score changes from parent to child. Weights of all 
+features sum to the output score of the estimator.
+
+Caveats:
+1. Feature weights just show if the feature contributed positively or
+   negatively to the final score, and does not show how increasing or
+   decreasing the feature value will change the prediction.
+2. In some cases, feature weight can be close to zero for an important feature.
+   For example, in a single tree that computes XOR function, the feature at the
+   top of the tree will have zero weight because expected scores for both
+   branches are equal, so decision at the top feature does not change the
+   expected score. For an ensemble predicting XOR functions it might not be
+   a problem, but it is not reliable if most trees happen to choose the same
+   feature at the top.
+</pre>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+        
+
+    
+
+        
+            
+                
+                
+    
+        <p style="margin-bottom: 0.5em; margin-top: 0em">
+            <b>
+    
+        y
+    
+</b>
+
+    
+    (score <b>4138.796</b>)
+
+top features
+        </p>
+    
+    <table class="eli5-weights"
+           style="border-collapse: collapse; border: none; margin-top: 0em; table-layout: auto; margin-bottom: 2em;">
+        <thead>
+        <tr style="border: none;">
+            
+                <th style="padding: 0 1em 0 0.5em; text-align: right; border: none;" title="Feature contribution already accounts for the feature value (for linear models, contribution = weight * feature value), and the sum of feature contributions is equal to the score or, for some classifiers, to the probability. Feature values are shown if &quot;show_feature_values&quot; is True.">
+                    Contribution<sup>?</sup>
+                </th>
+            
+            <th style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">Feature</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        
+            <tr style="background-color: hsl(120, 100.00%, 80.00%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2110.346
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        &lt;BIAS&gt;
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 91.42%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +630.225
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lavabo
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 92.30%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +539.673
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        carros
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 94.60%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +324.985
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        suite
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 96.38%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +183.620
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        social
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 96.70%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +161.116
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sendo
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 96.82%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +152.550
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sala
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 97.22%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +126.047
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        vaga
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 97.41%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +113.655
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 97.70%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +95.863
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        armarios
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 97.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +83.433
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        fitness
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 98.04%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +76.324
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        banheiro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 98.23%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +66.103
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        iguatemi
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 98.42%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +56.204
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        armario
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 98.55%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +49.488
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        localizacao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 98.77%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +39.214
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        02
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.05%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +27.250
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        distribuidos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.11%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +24.909
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        parque
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.27%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +18.715
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        carro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.33%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +16.482
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        festas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.33%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +16.358
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        excelente
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.37%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +15.267
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        churrasqueira
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.37%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +14.973
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        quiosque
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.40%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +13.986
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        apartamento
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.42%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +13.442
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        vista
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.45%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +12.524
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        leste
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.50%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +10.933
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        facil
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.54%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +9.696
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        portaria
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.57%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +8.787
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        playground
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.68%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +5.736
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        av
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.69%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +5.609
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        seguranca
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.70%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +5.262
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        estao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.75%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +4.109
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ceramico
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.78%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +3.383
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        tanque
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.79%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +3.084
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        baltazar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.80%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +3.015
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.81%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.820
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        brinquedoteca
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.81%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.745
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        bairro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.83%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.422
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lavar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.84%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.227
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        uniritter
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.84%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.217
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        garcia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.84%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.041
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        supermercado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.85%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.027
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.715
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        parquet
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.702
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        otima
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.675
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        assis
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.623
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        relacao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.373
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        total
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.332
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        borges
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.324
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        quadra
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.250
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cama
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.239
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        goncalves
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.216
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        50
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.207
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        mobiliado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.109
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        andar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.109
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        churrasqueiras
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.106
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        53
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.101
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ventilador
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.062
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ufrgs
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.971
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        70
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.950
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        semi
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.940
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        farmacia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.913
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        coletiva
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.859
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        infantil
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.797
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        jk
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.786
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        42
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.774
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        avenida
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.736
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        predio
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.679
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        teto
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.660
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        centro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.640
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        agende
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.606
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        58
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.574
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ipiranga
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.557
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cavalhada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.512
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        localizado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.369
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        protasio
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.307
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        montada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.307
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        40
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.286
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sol
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.279
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        roupas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.228
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        65
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.197
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        transporte
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.180
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        amplo
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.178
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        quiosques
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.172
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        area
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.98%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.148
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        39
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 100.00%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.014
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        porteiro
+    </td>
+    
+</tr>
+        
+        
+
+        
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.99%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.029
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        privativa
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.99%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.029
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        academia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.99%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.064
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        reformado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.98%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.107
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        casa
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.98%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.149
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cozinha
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.162
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        farmacias
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.164
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        60
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.255
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        outras
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.267
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        depurador
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.312
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        jardim
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.336
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lazer
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.373
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        bourbon
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.391
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        eletronico
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.401
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        microondas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.403
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sul
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.496
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        63
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.519
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        clinicas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.582
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        10
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.585
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        guaiba
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.596
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dois
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.650
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        praia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.739
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        garagem
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.798
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        44
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.807
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        condicionado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.810
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        medida
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.862
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        country
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.892
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lateral
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.918
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        elevadores
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.921
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        atraves
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.944
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cooktop
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.977
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        terraco
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.977
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        vidro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.998
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        televisao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.063
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        deus
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.117
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        completa
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.152
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        integrada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.176
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        bicicletario
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.218
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        living
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.251
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        zaffari
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.302
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        oandar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.314
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lima
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.370
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ceramica
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.409
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dependencia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.560
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        hs
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.562
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        panoramica
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.671
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        split
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.679
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        11
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.724
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        visita
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.769
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        possui
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.836
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        maquina
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.839
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        fundos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.85%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.996
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        todos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.84%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.066
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        espaco
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.84%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.141
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        servico
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.82%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.503
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        central
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.82%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.548
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        todas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.81%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.691
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        alegre
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.81%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.741
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        hall
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.80%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.939
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sofa
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.78%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.263
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        banheiros
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.78%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.442
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        gourmet
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.78%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.457
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        hospital
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.78%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.467
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        salao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.77%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.556
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dormitorio
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.76%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.834
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        forno
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.75%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.921
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        aquecedor
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.75%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.033
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cadeiras
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.74%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.356
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        nacional
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.74%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.360
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        publico
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.73%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.389
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        oeste
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.73%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.526
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        04
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.73%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.565
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        estacionamento
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.73%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.569
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        empregada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.69%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -5.505
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        locacao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.68%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -5.697
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        proximo
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.66%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -6.159
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        praca
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.65%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -6.639
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sacada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.64%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -6.819
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        alves
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.64%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -6.872
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        pia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.62%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -7.331
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        vento
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.57%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -8.760
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        porto
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.51%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -10.641
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        geladeira
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.50%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -10.992
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        frente
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.49%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -11.238
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        auxiliar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.48%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -11.337
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        gas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.47%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -11.720
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        hrs
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.44%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -12.702
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        01
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.42%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -13.462
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        moinhos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.38%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -14.731
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        closet
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.37%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -15.198
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        jogos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.29%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -17.821
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        solar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.25%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -19.417
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        piso
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.16%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -22.968
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        coberta
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.15%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -23.284
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        vagas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.11%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -24.849
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dupla
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.03%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -27.921
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        03
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 98.80%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -37.694
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        americana
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 98.71%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -41.848
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        elevador
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 98.58%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -48.241
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        posicao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 98.14%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -71.151
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lareira
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 96.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -147.918
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        piscina
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 96.32%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -188.028
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dormitorios
+    </td>
+    
+</tr>
+        
+
+        </tbody>
+    </table>
+
+            
+        
+
+        
+    
+        
+        
+    
+        <p style="margin-bottom: 0.5em; margin-top: 0em">
+            <b>
+    
+        y
+    
+</b>
+
+    
+    (score <b>4138.796</b>)
+
+top features
+        </p>
+    
+    <table class="eli5-weights"
+           style="border-collapse: collapse; border: none; margin-top: 0em; table-layout: auto; margin-bottom: 2em;">
+        <thead>
+        <tr style="border: none;">
+            
+                <th style="padding: 0 1em 0 0.5em; text-align: right; border: none;" title="Feature contribution already accounts for the feature value (for linear models, contribution = weight * feature value), and the sum of feature contributions is equal to the score or, for some classifiers, to the probability. Feature values are shown if &quot;show_feature_values&quot; is True.">
+                    Contribution<sup>?</sup>
+                </th>
+            
+            <th style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">Feature</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        
+            <tr style="background-color: hsl(120, 100.00%, 80.00%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2143.490
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        Highlighted in text (sum)
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 80.22%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2110.346
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        &lt;BIAS&gt;
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 96.42%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +183.620
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        social
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 97.44%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +113.655
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 98.06%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +76.324
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        banheiro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 98.57%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +49.488
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        localizacao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.06%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +27.250
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        distribuidos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.28%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +18.715
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        carro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.34%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +16.358
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        excelente
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.38%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +14.973
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        quiosque
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.41%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +13.986
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        apartamento
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.50%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +10.933
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        facil
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.57%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +8.787
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        playground
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.68%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +5.736
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        av
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.69%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +5.609
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        seguranca
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.70%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +5.262
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        estao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.75%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +4.109
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ceramico
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.80%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +3.084
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        baltazar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.80%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +3.015
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.81%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.820
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        brinquedoteca
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.81%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.745
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        bairro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.83%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.422
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lavar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.84%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.227
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        uniritter
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.84%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.217
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        garcia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.85%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.041
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        supermercado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.85%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +2.027
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.715
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        parquet
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.702
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        otima
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.675
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        assis
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.623
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        relacao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.373
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        total
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.332
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        borges
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.324
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        quadra
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.250
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cama
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.239
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        goncalves
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.216
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        50
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.207
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        mobiliado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.109
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        churrasqueiras
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.106
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        53
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.101
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ventilador
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +1.062
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ufrgs
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.971
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        70
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.950
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        semi
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.940
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        farmacia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.913
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        coletiva
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.859
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        infantil
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.797
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        jk
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.786
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        42
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.774
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        avenida
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.736
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        predio
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.679
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        teto
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.660
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        centro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.640
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        agende
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.606
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        58
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.574
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ipiranga
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.557
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cavalhada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.512
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        localizado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.369
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        protasio
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.307
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        montada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.307
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        40
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.286
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sol
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.279
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        roupas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.228
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        65
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.197
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        transporte
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.180
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        amplo
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.178
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        quiosques
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 99.98%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.148
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        39
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(120, 100.00%, 100.00%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        +0.014
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        porteiro
+    </td>
+    
+</tr>
+        
+        
+
+        
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.99%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.029
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        academia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.99%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.064
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        reformado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.162
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        farmacias
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.97%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.164
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        60
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.255
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        outras
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.267
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        depurador
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.312
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        jardim
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.96%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.336
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lazer
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.373
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        bourbon
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.391
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        eletronico
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.401
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        microondas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.95%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.403
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sul
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.496
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        63
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.519
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        clinicas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.582
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        10
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.585
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        guaiba
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.94%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.596
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dois
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.93%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.650
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        praia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.739
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        garagem
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.798
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        44
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.807
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        condicionado
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.810
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        medida
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.862
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        country
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.892
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lateral
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.918
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        elevadores
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.921
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        atraves
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.944
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cooktop
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.977
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        terraco
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.977
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        vidro
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.91%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -0.998
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        televisao
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.063
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        deus
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.117
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        completa
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.152
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        integrada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.90%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.176
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        bicicletario
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.251
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        zaffari
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.302
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        oandar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.89%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.314
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lima
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.370
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        ceramica
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.88%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.409
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dependencia
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.560
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        hs
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.562
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        panoramica
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.671
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        split
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.87%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.679
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        11
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.724
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        visita
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.769
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        possui
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.836
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        maquina
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.86%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.839
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        fundos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.85%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -1.996
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        todos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.85%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.066
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        espaco
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.82%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.503
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        central
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.82%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.548
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        todas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.81%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.741
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        hall
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.80%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -2.939
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sofa
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.79%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.263
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        banheiros
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.78%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.442
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        gourmet
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.78%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.457
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        hospital
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.76%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.834
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        forno
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.76%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -3.921
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        aquecedor
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.75%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.033
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        cadeiras
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.74%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.356
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        nacional
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.74%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.360
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        publico
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.74%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.389
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        oeste
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.73%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.526
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        04
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.73%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.565
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        estacionamento
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.73%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -4.569
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        empregada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.67%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -6.159
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        praca
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.65%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -6.639
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        sacada
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.64%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -6.819
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        alves
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.62%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -7.331
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        vento
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.51%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -10.641
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        geladeira
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.49%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -11.238
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        auxiliar
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.49%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -11.337
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        gas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.48%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -11.720
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        hrs
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.43%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -13.462
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        moinhos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.39%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -14.731
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        closet
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.37%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -15.198
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        jogos
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.16%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -22.968
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        coberta
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.16%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -23.284
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        vagas
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.12%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -24.849
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dupla
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 99.04%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -27.921
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        03
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 98.16%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -71.151
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        lareira
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 96.92%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -147.918
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        piscina
+    </td>
+    
+</tr>
+        
+            <tr style="background-color: hsl(0, 100.00%, 96.36%); border: none;">
+    <td style="padding: 0 1em 0 0.5em; text-align: right; border: none;">
+        -188.028
+    </td>
+    <td style="padding: 0 0.5em 0 0.5em; text-align: left; border: none;">
+        dormitorios
+    </td>
+    
+</tr>
+        
+
+        </tbody>
+    </table>
+
+    
+
+
+
+    <p style="margin-bottom: 2.5em; margin-top:-0.5em;">
+        <span style="opacity: 0.80"> </span><span style="background-color: hsl(0, 100.00%, 97.40%); opacity: 0.80" title="-12.702">01</span><span style="opacity: 0.80">  </span><span style="background-color: hsl(0, 100.00%, 98.93%); opacity: 0.80" title="-3.556">dormitorio</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(120, 100.00%, 84.60%); opacity: 0.85" title="161.116">sendo</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(120, 100.00%, 74.84%); opacity: 0.90" title="324.985">suite</span><span style="opacity: 0.80"> com </span><span style="background-color: hsl(120, 100.00%, 93.41%); opacity: 0.82" title="47.931">armarios</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(0, 100.00%, 99.50%); opacity: 0.80" title="-1.218">living</span><span style="opacity: 0.80">  </span><span style="background-color: hsl(120, 100.00%, 94.27%); opacity: 0.81" title="39.214">02</span><span style="opacity: 0.80">  ambientes com </span><span style="background-color: hsl(120, 100.00%, 60.00%); opacity: 1.00" title="630.225">lavabo</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(120, 100.00%, 92.63%); opacity: 0.82" title="56.204">armario</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(0, 100.00%, 99.88%); opacity: 0.80" title="-0.149">cozinha</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(0, 100.00%, 94.43%); opacity: 0.81" title="-37.694">americana</span><span style="opacity: 0.80"> com </span><span style="background-color: hsl(0, 100.00%, 98.31%); opacity: 0.80" title="-6.872">pia</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(120, 100.00%, 93.41%); opacity: 0.82" title="47.931">armarios</span><span style="opacity: 0.80"> e </span><span style="background-color: hsl(120, 100.00%, 97.04%); opacity: 0.80" title="15.267">churrasqueira</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(120, 100.00%, 99.92%); opacity: 0.80" title="0.086">area</span><span style="opacity: 0.80"> de </span><span style="background-color: hsl(0, 100.00%, 99.25%); opacity: 0.80" title="-2.141">servico</span><span style="opacity: 0.80"> com </span><span style="background-color: hsl(120, 100.00%, 98.97%); opacity: 0.80" title="3.383">tanque</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(0, 100.00%, 96.50%); opacity: 0.81" title="-19.417">piso</span><span style="opacity: 0.80"> porcelanato , </span><span style="background-color: hsl(120, 100.00%, 87.03%); opacity: 0.84" title="126.047">vaga</span><span style="opacity: 0.80"> para  2  </span><span style="background-color: hsl(120, 100.00%, 64.12%); opacity: 0.97" title="539.673">carros</span><span style="opacity: 0.80"> individual ,  16 deg </span><span style="background-color: hsl(120, 100.00%, 99.53%); opacity: 0.80" title="1.109">andar</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(0, 100.00%, 97.65%); opacity: 0.80" title="-10.992">frente</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(0, 100.00%, 93.38%); opacity: 0.82" title="-48.241">posicao</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(0, 100.00%, 96.70%); opacity: 0.81" title="-17.821">solar</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(120, 100.00%, 97.42%); opacity: 0.80" title="12.524">leste</span><span style="opacity: 0.80"> norte , </span><span style="background-color: hsl(0, 100.00%, 98.52%); opacity: 0.80" title="-5.697">proximo</span><span style="opacity: 0.80"> ao shopping </span><span style="background-color: hsl(120, 100.00%, 91.75%); opacity: 0.82" title="66.103">iguatemi</span><span style="opacity: 0.80"> com </span><span style="background-color: hsl(120, 100.00%, 97.29%); opacity: 0.80" title="13.442">vista</span><span style="opacity: 0.80"> para o </span><span style="background-color: hsl(120, 100.00%, 95.83%); opacity: 0.81" title="24.909">parque</span><span style="opacity: 0.80"> germania ,  61  m 2  de </span><span style="background-color: hsl(120, 100.00%, 99.92%); opacity: 0.80" title="0.086">area</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(0, 100.00%, 99.96%); opacity: 0.80" title="-0.029">privativa</span><span style="opacity: 0.80"> . condominio com </span><span style="background-color: hsl(120, 100.00%, 97.85%); opacity: 0.80" title="9.696">portaria</span><span style="opacity: 0.80"> , </span><span style="background-color: hsl(0, 100.00%, 94.01%); opacity: 0.81" title="-41.848">elevador</span><span style="opacity: 0.80"> , lavanderia , </span><span style="background-color: hsl(120, 100.00%, 85.18%); opacity: 0.85" title="152.550">sala</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(120, 100.00%, 90.29%); opacity: 0.83" title="83.433">fitness</span><span style="opacity: 0.80"> e </span><span style="background-color: hsl(0, 100.00%, 98.95%); opacity: 0.80" title="-3.467">salao</span><span style="opacity: 0.80"> de </span><span style="background-color: hsl(120, 100.00%, 96.88%); opacity: 0.81" title="16.482">festas</span><span style="opacity: 0.80"> . a auxiliadora predial conta com essa e mais de  5000  ofertas de imoveis para </span><span style="background-color: hsl(0, 100.00%, 98.55%); opacity: 0.80" title="-5.505">locacao</span><span style="opacity: 0.80"> em </span><span style="background-color: hsl(0, 100.00%, 97.99%); opacity: 0.80" title="-8.760">porto</span><span style="opacity: 0.80"> </span><span style="background-color: hsl(0, 100.00%, 99.12%); opacity: 0.80" title="-2.691">alegre</span><span style="opacity: 0.80"> e regiao . conte conosco para tornar realidade o sonho da sua nova </span><span style="background-color: hsl(0, 100.00%, 99.91%); opacity: 0.80" title="-0.107">casa</span><span style="opacity: 0.80"> !</span>
+    </p>
+
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+

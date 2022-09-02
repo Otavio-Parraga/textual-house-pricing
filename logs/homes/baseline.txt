@@ -1,0 +1,36 @@
+Dataset has 47689 samples.
+type
+lots land       18165
+house           17586
+condominium      8451
+mobile           1753
+townhouse         925
+manufactured      375
+multi family      368
+farm               17
+Name: id, dtype: int64
+Dataframe has now 29524 samples
+Dataframe has now 22108 samples
+id                          int64
+type                       object
+description                object
+area                      float64
+rooms                     float64
+bathrooms                 float64
+price                     float64
+lat                       float64
+lng                       float64
+age                       float64
+description_no_stp         object
+description_preprocess     object
+dtype: object
+Evaluating regressor Extremely Randomized Trees...
+MSE: 4798408195613.904 | MAE: 705658.874 | RMSE: 2190526.922 | MAPE: 0.831 | MdAPE: 0.341 | R2: 0.464
+Evaluating regressor Gradient Boosting...
+MSE: 4255692519356.154 | MAE: 689598.152 | RMSE: 2062932.990 | MAPE: 1.046 | MdAPE: 0.467 | R2: 0.535
+Evaluating regressor Random Forest...
+MSE: 4362750094107.579 | MAE: 683200.484 | RMSE: 2088719.726 | MAPE: 0.823 | MdAPE: 0.346 | R2: 0.517
+Evaluating regressor XGBoost...
+MSE: 4760711445370.086 | MAE: 695317.167 | RMSE: 2181905.462 | MAPE: 0.876 | MdAPE: 0.400 | R2: 0.474
+Evaluating regressor LightGBM...
+MSE: 4500592636397.522 | MAE: 681481.592 | RMSE: 2121460.025 | MAPE: 0.929 | MdAPE: 0.416 | R2: 0.504

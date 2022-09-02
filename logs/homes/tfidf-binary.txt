@@ -1,0 +1,26 @@
+Dataset has 47689 samples.
+Dataframe has now 29524 samples
+Dataframe has now 22108 samples
+Textual Preprocess Pipeline:
+ColumnTransformer(remainder='passthrough',
+                  transformers=[('bow',
+                                 Pipeline(steps=[('countvectorizer',
+                                                  CountVectorizer(binary=True,
+                                                                  dtype=<class 'numpy.float32'>,
+                                                                  min_df=0.001)),
+                                                 ('tfidftransformer',
+                                                  TfidfTransformer()),
+                                                 ('truncatedsvd',
+                                                  TruncatedSVD(n_components=30,
+                                                               random_state=42))]),
+                                 'description_no_stp')])
+Evaluating regressor Extremely Randomized Trees...
+MSE: 2577699781952.489 | MAE: 475990.499 | RMSE: 1605521.654 | MAPE: 0.531 | MdAPE: 0.244 | R2: 0.719
+Evaluating regressor Gradient Boosting...
+MSE: 2301621751325.581 | MAE: 502167.882 | RMSE: 1517109.670 | MAPE: 0.627 | MdAPE: 0.332 | R2: 0.751
+Evaluating regressor Random Forest...
+MSE: 2324031236186.472 | MAE: 452630.546 | RMSE: 1524477.365 | MAPE: 0.518 | MdAPE: 0.235 | R2: 0.750
+Evaluating regressor XGBoost...
+MSE: 2004343452815.584 | MAE: 446415.959 | RMSE: 1415748.372 | MAPE: 0.522 | MdAPE: 0.269 | R2: 0.778
+Evaluating regressor LightGBM...
+MSE: 2391180623596.220 | MAE: 446464.526 | RMSE: 1546344.277 | MAPE: 0.524 | MdAPE: 0.259 | R2: 0.747

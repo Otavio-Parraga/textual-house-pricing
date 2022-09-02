@@ -1,0 +1,12 @@
+lightgbm
+numpy
+pandas
+scikit-learn==0.24.2
+xgboost
+unidecode
+gensim==3.8
+flair
+transformers
+torch
+eli5
+nltk
